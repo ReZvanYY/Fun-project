@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Minesweeper</title>
+
+    <style>
+        body {
+            overflow: hidden;
+
+        }
+
+        .container {}
+
+        .container {
+            background-color: black;
+            border: solid 3px;
+            border-radius: 1000px 400px 400px 1000px;
+            padding: 15px;
+            display: block;
+            margin-left: 0%;
+            height: 500px;
+            width: 700px;
+        }
+
+        .ball {
+            border: solid 3px;
+            border-radius: 1000px 1px 0px 0px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            margin-top: 110px;
+            margin-left: 100px;
+            width: 80px;
+            height: 60px;
+            background-color: red
+        }
+
+        .eye {
+            border: solid 3px black;
+            border-radius: 200px 100px 100px 100px;
+            padding: 15px;
+            position: absolute;
+            top: 175px;
+            left: 135px;
+            background-color: black;
+            height: 15px;
+            width: 10px;
+            rotate: 10deg;
+        }
+
+        .eye2 {
+            border: solid white;
+            border-radius: 100px;
+            position: absolute;
+            top: 185px;
+            left: 144px;
+            width: 13px;
+            height: 15px;
+            background-color: white;
+        }
+
+        .ring {
+            border: outset 15px black;
+            border-radius: 150px;
+            width: 60px;
+            height: 500px;
+            position: absolute;
+            top: 13px;
+            left: 740px;
+            background-color: black;
+
+        }
+
+        .mouth {
+            border: solid;
+            border-radius: 100px;
+            width: 300px;
+            height: 150px;
+            position: absolute;
+            top: 315px;
+            left: 80px;
+            rotate: -35deg;
+            background-color: red;
+
+        }
+
+        .teeth {
+            border: solid white;
+            width: 55px;
+            height: 55px;
+            rotate: -80deg;
+            border-radius: 0% 100% 0% 0%;
+            background-color: white;
+            position: absolute;
+            top: 300px;
+            left: 190px;
+        }
+
+        .teeth2 {
+            border: solid white;
+            width: 55px;
+            height: 55px;
+            rotate: -90deg;
+            border-radius: 0% 100% 0% 0%;
+            background-color: white;
+            position: absolute;
+            top: 358px;
+            left: 110px;
+        }
+
+        .teeth3 {
+            border: solid white;
+            width: 55px;
+            height: 55px;
+            rotate: -80deg;
+            border-radius: 0% 100% 0% 0%;
+            background-color: white;
+            position: absolute;
+            top: 325px;
+            left: 155px;
+
+        }
+
+        .bteeth1 {
+            border: solid white;
+            width: 55px;
+            height: 55px;
+            rotate: 95deg;
+            border-radius: 0% 100% 0% 0%;
+            background-color: white;
+            position: absolute;
+            top: 380px;
+            left: 280px;
+
+        }
+
+        .bteeth2 {
+            border: solid white;
+            width: 55px;
+            height: 55px;
+            rotate: 90deg;
+            border-radius: 0% 100% 0% 0%;
+            background-color: white;
+            position: absolute;
+            top: 420px;
+            left: 220px;
+
+        }
+
+        .bteeth3 {
+            border: solid white;
+            width: 55px;
+            height: 55px;
+            rotate: 98deg;
+            border-radius: 0% 100% 0% 0%;
+            background-color: white;
+            position: absolute;
+            top: 450px;
+            left: 175px;
+
+        }
+
+        .smoke {
+            position: absolute;
+            top: 55px;
+            left: 835px;
+            width: 190px;
+            height: 450px;
+            background-color: rgb(226, 73, 12);
+            opacity: 1.5;
+            box-shadow: 0 0 10px 5px rgb(231, 4, 4);
+            transition: opacity 1s;
+            animation: smoke 1s infinite alternate;
+
+        }
+
+        @keyframes smoke {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script>
+        let app = document.getElementById('app');
+
+        updateView();
+        function updateView() {
+            app.innerHTML = /* HTML */`
+            <div class="container">
+                <div class="eye"></div>
+                <div class="eye2"></div>
+                <div class="ball"></div>
+                <div class="ring"></div>
+                <div class="mouth"></div>
+                <div class="teeth"></div>
+                <div class="teeth2"></div>
+                <div class="teeth3"></div>
+                <div class="bteeth1"></div>
+                <div class="bteeth2"></div>
+                <div class="bteeth3"></div>
+                <div class="smoke"></div>
+
+                
+        </div>
+            
+            `;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+</html>
